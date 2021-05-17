@@ -1,15 +1,15 @@
-package composite1;
+package Composite;
 
 public class Test 
 {
     public static void main(String[] args)
     {
-        politicians pm = new politicians("India","PM");
-        politicians cm1 = new politicians("Gujarat","CM");
-        politicians cm2 = new politicians("Rajasthan","CM");
-        politicians mp1 = new politicians("JND","MP");
-        politicians mp2 = new politicians("AHM","MP");
-        politicians mp3 = new politicians("JPR","MP");
+        Politician pm = new Politician("India","PM");
+        Politician cm1 = new Politician("Gujarat","CM");
+        Politician cm2 = new Politician("Rajasthan","CM");
+        Politician mp1 = new Politician("JND","MP");
+        Politician mp2 = new Politician("AHM","MP");
+        Politician mp3 = new Politician("JPR","MP");
         
         pm.add(cm1);
         pm.add(cm2);
@@ -18,9 +18,9 @@ public class Test
         cm2.add(mp3);
         
         System.out.println(pm);
-        for(politicians cms : pm.getothers()){
+        for(Politician cms : pm.getothers()){
             System.out.println("\n"+cms);
-            for(politicians mps : cms.getothers()){
+            for(Politician mps : cms.getothers()){
                System.out.println(mps); 
             }
         }
