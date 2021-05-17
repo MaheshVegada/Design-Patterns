@@ -1,26 +1,26 @@
-package composite1;
+package Composite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class politicians 
+public class Politician 
 {
     private String name;
     private String position;
-    private List<politicians> others;
+    private List<Politician> others;
 
-    public politicians(String name, String position) {
+    public Politician(String name, String position) {
         this.name = name;
         this.position = position;
-        others = new ArrayList<politicians>();
+        others = new ArrayList<Politician>();
     }
-    public void add(politicians p){
+    public void add(Politician p){
         others.add(p);
     }
-    public void remove(politicians p){
+    public void remove(Politician p){
         others.remove(p);
     }
-    public List<politicians> getothers(){
+    public List<Politician> getothers(){
         return others;
     }
     public String toString(){
